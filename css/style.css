@@ -362,127 +362,104 @@ header nav a:hover {
     opacity: 0.8;
 }
 
+/* ---------- MOBILE RESPONSIVE FIXES ---------- */
+@media (max-width: 768px) {
 
-/* ---------- FULL MOBILE RESPONSIVE FIX ---------- */
-@media (max-width: 900px) {
-
-    /* Header Fix */
+    /* --- NAVBAR FIX --- */
     header {
         padding: 15px 20px;
-    }
-    header nav a {
-        margin-left: 12px;
-        font-size: 14px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    /* Home Section Fix */
+    header nav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    header nav a {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+    /* --- HOME SECTION MOBILE FIX --- */
     .home {
+        padding: 130px 20px 60px;
         flex-direction: column;
-        padding: 120px 20px 50px;
         text-align: center;
     }
 
     .home .text h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
+
     .home .text h3 {
         font-size: 18px;
-    }
-    .home .text p {
-        font-size: 15px;
-        max-width: 100%;
-    }
-
-    .btn {
-        padding: 10px 18px;
-        font-size: 14px;
-    }
-
-    .photo {
-        margin-top: 30px;
     }
 
     .photo img {
         width: 200px;
     }
+
     .photo .circle {
         width: 220px;
         height: 220px;
         top: -15px;
-        right: -15px;
+        right: -10px;
     }
 
-    /* Section general fix */
+      .home .btn-group {
+        margin-bottom: 25px;   /* space below buttons */
+    }
+
+    .photo {
+        margin-top: 25px;      /* space above profile image */
+    }
+
+    /* --- ABOUT SECTION MOBILE FIX --- */
+    #about,
     .section {
         padding: 60px 20px;
         text-align: center;
+        align-items: center;
     }
 
-    .section h2 {
-        font-size: 28px;
+    #about p,
+    .section p {
+        max-width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 1.7;
     }
 
-    /* Skills grid fix */
+    /* --- SKILLS --- */
     .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 14px;
     }
 
-    .skills-grid span {
-        font-size: 15px;
-        padding: 12px;
-    }
-
-    /* Project card fix */
+    /* --- PROJECT CARDS --- */
     .project-card {
         max-width: 100%;
-        padding: 18px;
-        text-align: left;
+        padding: 20px;
     }
 
-    /* Education */
-    .edu-list li {
-        font-size: 16px;
-    }
-
-    /* Contact Section Fix */
+    /* --- CONTACT SECTION --- */
     .contact {
-        padding: 70px 20px;
-        text-align: center;
+        padding: 60px 20px;
     }
 
     .contact .social {
         flex-direction: column;
-        gap: 14px;
+        gap: 15px;
     }
 
     .contact .social a {
         width: 100%;
-        max-width: 250px;
-        margin: auto;
-    }
-
-    .footer {
-        margin-top: 25px;
-        font-size: 13px;
+        max-width: 230px;
     }
 }
-
-/* Extra Small Screens Fix (Phones < 500px) */
-@media (max-width: 500px) {
-    .home .text h1 {
-        font-size: 28px;
-    }
-    .home .text h3 {
-        font-size: 16px;
-    }
-
-    .photo img {
-        width: 170px;
-    }
-    .photo .circle {
-        width: 180px;
-        height: 180px;
-    }
-}
-
