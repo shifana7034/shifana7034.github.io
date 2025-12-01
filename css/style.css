@@ -1,0 +1,375 @@
+/* ---------- GENERAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3c507f;
+}
+
+header nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+header nav a:hover {
+    color: #0ea5e9;
+}
+
+/* ---------- HOME SECTION ---------- */
+.home {
+    padding: 140px 70px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.home .text h1 span {
+    color: #0284c7;
+}
+
+.home .text h3 {
+    margin: 10px 0 15px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.home .text p {
+    max-width: 500px;
+    color: #64748b;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #0284c7;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #0369a1;
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+.photo {
+    position: relative;
+}
+
+.photo .circle {
+    width: 250px;
+    height: 250px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    z-index: -1;
+}
+
+.photo img {
+    width: 280px;
+    border-radius: 50%;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- ABOUT SECTION ---------- */
+#about {
+    padding: 90px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* makes the paragraph beautifully centered */
+}
+
+#about h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0f172a;
+    position: relative;
+}
+
+#about h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #0ea5e9;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+#about p {
+    max-width: 850px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    border-left: 5px solid #0ea5e9;
+}
+
+/* ---------- SECTION STYLES ---------- */
+.section {
+    padding: 90px 70px;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+
+/* ---------- SKILLS SECTION ---------- */
+#skills {
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0f172a;
+    position: relative;
+}
+
+#skills h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #0ea5e9;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ---------- SKILLS GRID ---------- */
+.skills-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Individual Skill Box */
+.skills-grid span {
+    padding: 16px;
+    background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+    color: #0c4a6e;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #bae6fd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+    cursor: default;
+}
+
+/* Hover Effect */
+.skills-grid span:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: white;
+    border-color: #0ea5e9;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+}
+
+
+/* ---------- PROJECT SECTION ---------- */
+#projects {
+    text-align: center;
+}
+
+/* Heading underline */
+#projects h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #0ea5e9;
+    display: block;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Projects grid */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* ---------- PROJECT CARD ---------- */
+.project-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating top bar */
+.project-card::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #0ea5e9;
+    top: 0;
+    left: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Date */
+.project-date {
+    font-weight: 600;
+    color: #0284c7;
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* Description */
+.project-card p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contact {
+    background: linear-gradient(135deg, #2b3a55, #1e293b);
+    color: #f1f5f9;
+    text-align: center;
+    padding: 90px 20px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #e2e8f0;
+    letter-spacing: 1px;
+}
+
+/* Contact details */
+.contact p {
+    font-size: 17px;
+    color: #cbd5e1;
+    margin: 4px 0;
+}
+
+/* Social Links */
+.contact .social {
+    display: flex;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.contact .social a {
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid #64748b;
+    color: #e2e8f0;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.contact .social a:hover {
+    background: #60a5fa;
+    color: #0f172a;
+    border-color: transparent;
+    transform: translateY(-4px);
+}
+
+/* Footer */
+.contact .footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #94a3b8;
+    opacity: 0.8;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .photo {
+        margin-top: 30px;
+    }
+}
