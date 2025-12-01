@@ -449,17 +449,21 @@ header nav a:hover {
     }
 
     /* --- CONTACT SECTION --- */
-    .contact {
-        padding: 60px 20px;
+     .contact {
+        gap: 5px;
+        padding: 50px 20px;
+    }
+
+    .contact p {
+        margin: 1px 0;
     }
 
     .contact .social {
-        flex-direction: column;
-        gap: 15px;
+        margin-top: 12px;
+        gap: 12px;
     }
 
-    .contact .social a {
-        width: 100%;
-        max-width: 230px;
+    .contact .footer {
+        margin-top: 15px;
     }
 }
